@@ -8,4 +8,4 @@ It uses UIDynamics classes, so you can use only if your project
 does NOT support iOS version < 7.0
 
 Demo
-<iframe width="420" height="315" src="//www.youtube.com/embed/HogSEquruzs" frameborder="0" allowfullscreen></iframe>
+http://youtu.be/HogSEquruzs
