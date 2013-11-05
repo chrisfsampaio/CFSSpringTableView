@@ -8,12 +8,6 @@
 
 #import "SpringTableView.h"
 
-@interface UITableView()
-
-- (id)_createPreparedCellForGlobalRow:(int)arg1 withIndexPath:(id)arg2;
-
-@end
-
 @interface SpringTableView()
 
 @property (nonatomic, assign) CGPoint lastContentOffset;
@@ -87,9 +81,8 @@ static CGFloat const kSpringTableViewDefaultResistance = 0.001f;
     }
 }
 
-- (void)willDisplayCell:(id)view
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = view;
     NSNumber *key = @([cell hash]);
     UIAttachmentBehavior *springBehavior = self.behaviors[key];
     if (springBehavior)
@@ -105,11 +98,10 @@ static CGFloat const kSpringTableViewDefaultResistance = 0.001f;
     self.behaviors[key] = springBehavior;
 }
 
-- (id)_createPreparedCellForGlobalRow:(int)arg1 withIndexPath:(id)arg2;
+- (void)reloadData
 {
-    id cell = [super _createPreparedCellForGlobalRow:arg1 withIndexPath:arg2];
-    [self willDisplayCell:cell];
-    return cell;
+    [self.dynamicAnimator removeAllBehaviors];
+    [super reloadData];
 }
 
 #pragma mark Getters/Setters
