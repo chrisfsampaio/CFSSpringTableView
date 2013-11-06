@@ -81,7 +81,7 @@ static CGFloat const kSpringTableViewDefaultResistance = 0.001f;
     }
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareCellForShow:(UITableViewCell *)cell
 {
     NSNumber *key = @([cell hash]);
     UIAttachmentBehavior *springBehavior = self.behaviors[key];
@@ -96,6 +96,8 @@ static CGFloat const kSpringTableViewDefaultResistance = 0.001f;
     springBehavior.frequency = self.hasAssignedFrequency ? self.springFrequency : kSpringTableViewDefaultFrequency;
     [self.dynamicAnimator addBehavior:springBehavior];
     self.behaviors[key] = springBehavior;
+    
+    self.lastContentOffset = self.contentOffset;
 }
 
 - (void)reloadData
