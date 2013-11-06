@@ -14,7 +14,7 @@
  *  It uses UIDynamics classes, so you can use only if your project
  *  does NOT support iOS version < 7.0
  */
-NS_CLASS_AVAILABLE_IOS(7_0) @interface SpringTableView : UITableView
+NS_CLASS_AVAILABLE_IOS(7_0) @interface CFSSpringTableView : UITableView
 
 /**
  *  The damping factor to the spring effect on the cells.

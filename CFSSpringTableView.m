@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Christian Sampaio. All rights reserved.
 //
 
-#import "SpringTableView.h"
+#import "CFSSpringTableView.h"
 
-@interface SpringTableView()
+@interface CFSSpringTableView()
 
 @property (nonatomic, assign) CGPoint lastContentOffset;
 @property (nonatomic, strong) UIDynamicAnimator *dynamicAnimator;
@@ -23,7 +23,7 @@ static CGFloat const kSpringTableViewDefaultDamping = 0.7f;
 static CGFloat const kSpringTableViewDefaultFrequency = 0.7f;
 static CGFloat const kSpringTableViewDefaultResistance = 0.001f;
 
-@implementation SpringTableView
+@implementation CFSSpringTableView
 
 - (id)initWithFrame:(CGRect)frame
 {
