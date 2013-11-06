@@ -13,7 +13,9 @@ http://youtu.be/HogSEquruzs
 *Note
 ######You must call the instance method |prepareCellForShow:(UITableViewCell)cell| on your delegate implementation of |tableView:willShow order to get the spring effect. Here is an example:
 
+```objectivec
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView prepareCellForShow:cell];
 }
+```
