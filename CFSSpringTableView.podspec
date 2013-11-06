@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "CFSpringTableView"
+  s.name         = "CFSSpringTableView"
   s.version      = "0.0.1"
   s.summary      = "Make a Spring connected Table View."
 
@@ -31,7 +31,7 @@ does NOT support iOS version < 7.0
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "https://github.com/chrisfsampaio/CFSpringTableView"
+  s.homepage     = "https://github.com/chrisfsampaio/CFSSpringTableView"
   # s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 
 
@@ -78,7 +78,7 @@ does NOT support iOS version < 7.0
   #  Supports git, hg, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/chrisfsampaio/CFSpringTableView.git", :branch => "master" }
+  s.source       = { :git => "https://github.com/chrisfsampaio/CFSSpringTableView.git", :branch => "master" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
